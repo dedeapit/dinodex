@@ -1,0 +1,16 @@
+export default {
+  type: 'mysql',
+  name: 'main',
+  host: process.env.DB_HOST,
+  port: process.env.DB_PORT,
+  username: process.env.DB_USERNAME,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+  entities: (process.env.DB_ENTITIES as string).split(' '),
+  migrations: (process.env.DB_MIGRATIONS as string).split(' '),
+  migrationsRun: process.env.DB_MIGRATIONS_RUN === 'true',
+  synchronize: process.env.DB_SYNCHRONIZE === 'true',
+  logging: process.env.DB_LOGGING === 'true',
+  timezone: process.env.DB_TIMEZONE,
+  charset: process.env.DB_CHARSET,
+}

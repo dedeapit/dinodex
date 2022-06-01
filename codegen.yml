@@ -1,0 +1,16 @@
+overwrite: true
+schema: 'http://localhost:3000/graphql'
+generates:
+  src/generated/graphql.ts:
+    config:
+      contextType: ../lib/server/graphql/context#AppContext
+      scalars:
+        Date: '{ year: number, month: number, date: number }'
+        Time: '{ hours: number, minutes: number, seconds: number }'
+        DateTime: Date
+      defaultMapper: '@types#DeepPartial<{T}>'
+    plugins:
+      - 'typescript'
+      - 'typescript-resolvers'
+require:
+  - ts-node/register

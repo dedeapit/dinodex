@@ -1,0 +1,34 @@
+{
+    "compilerOptions": {
+      "target": "es6",
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "lib": ["es2015", "esnext.asynciterable", "esnext.array"],
+      "esModuleInterop": true,
+      "strict": true,
+      "allowJs": false,
+      "strictNullChecks": true,
+      "skipLibCheck": true,
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "sourceMap": true,
+      "outDir": "dist",
+      "rootDir": "src",
+      "baseUrl": "src",
+      "paths": {
+        "@generated/*": ["./generated/*"],
+        "@lib/*": ["./lib/*"],
+        "@config/*": ["./config/*"],
+        "@modules/*": ["./modules/*"],
+        "@scripts/*": ["./scripts/*"],
+        "@types": ["./types"]
+      }
+    },
+    "exclude": [
+      "node_modules",
+      "dist",
+      "test/**/*",
+      "tsconfig-paths-bootstrap.js"
+    ]
+  }
+  
